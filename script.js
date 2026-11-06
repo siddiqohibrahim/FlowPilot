@@ -171,13 +171,14 @@ if (signupForm) {
                         selected_plan: planFromUrl || "free"
                     },
 
-                    emailRedirectTo: new URLSearchParams(
-                        window.location.search
-                    ).has("invitation_id")
-                        ? window.location.origin +
-                            "/accept-invitation.html" +
-                            window.location.search
-                        : window.location.origin + "/login.html"
+                  emailRedirectTo: new URLSearchParams(
+                    window.location.search
+                ).has("invitation_id")
+                    ? new URL(
+                        "accept-invitation.html" + window.location.search,
+                        window.location.href
+                    ).href
+                    : new URL("login.html", window.location.href).href
                 }
             });
 
@@ -283,7 +284,7 @@ if (loginForm) {
             const { error } = await supabaseClient.auth.resetPasswordForEmail(
                 email,
                 {
-                    redirectTo: window.location.origin + "/reset-password.html"
+                   redirectTo: new URL("reset-password.html", window.location.href).href
                 }
             );
 
@@ -1819,8 +1820,7 @@ if (settingsResetPasswordButton) {
                         email,
                         {
                             redirectTo:
-                                window.location.origin +
-                                "/reset-password.html"
+                               new URL("reset-password.html", window.location.href).href
                         }
                     );
 
