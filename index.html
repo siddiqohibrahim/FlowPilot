@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowPilot | Manage Projects Smarter</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+
+              <a class="navbar-brand" href="#">
+                  FlowPilot<span>.</span>
+              </a>
+
+              <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mainNavbar"
+                  aria-controls="mainNavbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+              >
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="mainNavbar">
+
+                  <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#features">Features</a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="#how-it-works">How It Works</a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="#pricing">Pricing</a>
+                      </li>
+                  </ul>
+
+                  <div class="navbar-actions">
+                      <a href="login.html" class="login-link">Log in</a>
+                      <a href="#choose-price" class="btn btn-primary">
+                          Get Started
+                      </a>
+                  </div>
+
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main>
+      <section id="home" class="hero-section">
+          <div class="container">
+              <div class="row align-items-center g-5">
+
+                  <div class="col-lg-6">
+                      <p class="hero-label">
+                          PROJECT MANAGEMENT, SIMPLIFIED
+                      </p>
+
+                      <h1>
+                          Your work,
+                          <span>finally in sync.</span>
+                      </h1>
+
+                      <p class="hero-description">
+                          Plan projects, organize tasks, and keep your
+                          entire team moving forward — all in one place.
+                      </p>
+
+                      <div class="hero-actions">
+                          <a href="#start-free" class="btn btn-primary">
+                              Start for Free
+                          </a>
+
+                          <a href="#features" class="learn-more">
+                              Explore Features →
+                          </a>
+                      </div>
+
+                      <p class="hero-note">
+                          No credit card required.
+                      </p>
+                  </div>
+
+                  <div class="col-lg-6">
+                      <div class="dashboard-preview">
+                          <div class="dashboard-topbar">
+                              <div>
+                                  <span class="dashboard-dot"></span>
+                                  <span class="dashboard-dot"></span>
+                                  <span class="dashboard-dot"></span>
+                              </div>
+
+                              <span>FlowPilot Workspace</span>
+                          </div>
+
+                          <div class="dashboard-content">
+                              <p class="dashboard-label">
+                                  YOUR OVERVIEW
+                              </p>
+
+                              <h3>Good morning, Alex 👋</h3>
+
+                              <div class="row g-3 mt-2">
+                                  <div class="col-6">
+                                      <div class="stat-card">
+                                          <p>Active Projects</p>
+                                          <h4>12</h4>
+                                          <span>Across your team</span>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-6">
+                                      <div class="stat-card">
+                                          <p>Tasks Completed</p>
+                                          <h4>84%</h4>
+                                          <span>This month</span>
+                                      </div>
+                                  </div>
+                              </div>
+
+                              <div class="task-panel mt-4">
+                                  <h5>Today's Priorities</h5>
+
+                                  <div class="task-item">
+                                      <span class="task-check">✓</span>
+                                      <span>Review project proposal</span>
+                                      <span class="task-status done">
+                                          Done
+                                      </span>
+                                  </div>
+
+                                  <div class="task-item">
+                                      <span class="task-check"></span>
+                                      <span>Prepare team presentation</span>
+                                      <span class="task-status progress">
+                                          In progress
+                                      </span>
+                                  </div>
+
+                                  <div class="task-item">
+                                      <span class="task-check"></span>
+                                      <span>Update project timeline</span>
+                                      <span class="task-status pending">
+                                          Pending
+                                      </span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+      <!-- FEATURES SECTION -->
+<section id="features" class="features-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="features-heading text-center">
+            <p class="section-label">POWERFUL FEATURES</p>
+
+            <h2>
+                Everything your team needs
+                <span>to move forward.</span>
+            </h2>
+
+            <p class="section-description">
+                FlowPilot brings your tasks, team, and projects
+                together so you can focus on getting work done.
+            </p>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="row g-4 mt-4">
+
+            <!-- Feature One -->
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon task-icon">
+                        <span>✓</span>
+                    </div>
+
+                    <h3>Task Management</h3>
+
+                    <p>
+                        Organize your workload, set deadlines,
+                        and prioritize tasks without losing track
+                        of what matters most.
+                    </p>
+
+                    <a href="#get-started" class="feature-link">
+                        Explore task management →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature Two -->
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon team-icon">
+                        <span>↗</span>
+                    </div>
+
+                    <h3>Team Collaboration</h3>
+
+                    <p>
+                        Bring everyone together, share updates,
+                        and keep your team aligned from start
+                        to finish.
+                    </p>
+
+                    <a href="#get-started" class="feature-link">
+                        Discover collaboration →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature Three -->
+            <div class="col-md-6 col-lg-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon tracking-icon">
+                        <span>◎</span>
+                    </div>
+
+                    <h3>Project Tracking</h3>
+
+                    <p>
+                        See project progress at a glance,
+                        track milestones, and identify what
+                        needs attention.
+                    </p>
+
+                    <a href="#get-started" class="feature-link">
+                        View project tracking →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section id="how-it-works" class="how-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="how-heading text-center">
+            <p class="section-label">HOW IT WORKS</p>
+
+            <h2>
+                Less chaos.
+                <span>More progress.</span>
+            </h2>
+
+            <p class="section-description">
+                Get your team organized and moving forward
+                in three simple steps.
+            </p>
+        </div>
+
+        <!-- Three Steps -->
+        <div class="row g-4 mt-5">
+
+            <!-- Step One -->
+            <div class="col-md-4">
+                <div class="how-card">
+                    <div class="step-number">01</div>
+
+                    <h3>Create your workspace</h3>
+
+                    <p>
+                        Bring your team together in one shared
+                        workspace and set up your first project.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step Two -->
+            <div class="col-md-4">
+                <div class="how-card">
+                    <div class="step-number">02</div>
+
+                    <h3>Organize your tasks</h3>
+
+                    <p>
+                        Break projects into manageable tasks,
+                        assign responsibilities, and set deadlines.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step Three -->
+            <div class="col-md-4">
+                <div class="how-card">
+                    <div class="step-number">03</div>
+
+                    <h3>Track your progress</h3>
+
+                    <p>
+                        Follow your team's progress, review
+                        milestones, and keep work moving forward.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Call to Action -->
+        <div class="how-cta text-center">
+            <a href="#choose-price" class="btn btn-primary">
+                Get Started Today
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section id="pricing" class="pricing-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="pricing-heading text-center">
+            <p class="section-label">SIMPLE PRICING</p>
+
+            <h2>
+                The right plan for
+                <span>your next big idea.</span>
+            </h2>
+
+            <p class="section-description">
+                Start for free, then choose the plan that
+                works best for your team.
+            </p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div id="choose-price" class="row g-4 mt-5">
+
+            <!-- FREE PLAN -->
+            <div id="start-free" class="col-md-6 col-lg-4">
+                <div class="pricing-card h-100">
+
+                    <h3>Free</h3>
+
+                    <p class="plan-description">
+                        For individuals getting started.
+                    </p>
+
+                    <div class="plan-price">
+                        $0 <span>/ month</span>
+                    </div>
+
+                    
+                    <a href="signup.html?plan=free"
+                    class="btn btn-outline-primary w-100 plan-button"
+                    data-plan="free">
+                        Get Started Free
+                    </a>
+
+
+                    <hr>
+
+                    <p class="includes-label">WHAT'S INCLUDED</p>
+
+                    <ul class="plan-features">
+                        <li>✓ Up to 3 active projects</li>
+                        <li>✓ Basic task management</li>
+                        <li>✓ Personal workspace</li>
+                        <li>✓ Basic project overview</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- PRO PLAN -->
+            <div class="col-md-6 col-lg-4">
+                <div class="pricing-card pricing-featured h-100">
+
+                    <span class="popular-label">MOST POPULAR</span>
+
+                    <h3>Pro</h3>
+
+                    <p class="plan-description">
+                        For professionals managing more.
+                    </p>
+
+                    <div class="plan-price">
+                        $12 <span>/ user / month</span>
+                    </div>
+
+                   
+                    <a href="signup.html?plan=pro"
+                    class="btn btn-primary w-100 plan-button"
+                    data-plan="pro">
+                        Choose Pro
+                    </a>
+
+
+                    <hr>
+
+                    <p class="includes-label">EVERYTHING IN FREE, PLUS</p>
+
+                    <ul class="plan-features">
+                        <li>✓ Unlimited active projects</li>
+                        <li>✓ Advanced task management</li>
+                        <li>✓ Project progress tracking</li>
+                        <li>✓ Priority support</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- TEAM PLAN -->
+            <div class="col-md-6 col-lg-4">
+                <div class="pricing-card h-100">
+
+                    <h3>Team</h3>
+
+                    <p class="plan-description">
+                        For teams working together.
+                    </p>
+
+                    <div class="plan-price">
+                        $24 <span>/ user / month</span>
+                    </div>
+
+                    
+                    <a href="signup.html?plan=team"
+                    class="btn btn-outline-primary w-100 plan-button"
+                    data-plan="team">
+                        Choose Team
+                    </a>
+
+
+                    <hr>
+
+                    <p class="includes-label">EVERYTHING IN PRO, PLUS</p>
+
+                    <ul class="plan-features">
+                        <li>✓ Shared team workspaces</li>
+                        <li>✓ Team collaboration tools</li>
+                        <li>✓ Advanced reporting</li>
+                        <li>✓ Team management controls</li>
+                    </ul>
+
+                </div>
+            </div>
+
+          </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+
+        <div class="section-heading text-center">
+            <span class="section-label">TESTIMONIALS</span>
+
+            <h2>Teams love working with FlowPilot</h2>
+
+            <p>
+                Discover how teams are organizing their work
+                and moving projects forward with confidence.
+            </p>
+        </div>
+
+        <div id="testimonialCarousel"
+             class="carousel slide"
+             data-bs-ride="false">
+
+            <div class="carousel-inner">
+
+                <!-- TESTIMONIAL 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "FlowPilot has made managing our projects
+                            so much easier. Everyone understands their
+                            responsibilities, and nothing gets lost."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=12"
+                                 alt="Portrait of James Davidson">
+
+                            <div>
+                                <h5>James Davidson</h5>
+                                <span>Project Manager</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "I love how easy it is to track our progress.
+                            We spend less time chasing updates and more
+                            time focusing on meaningful work."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=47"
+                                 alt="Portrait of Sarah Mitchell">
+
+                            <div>
+                                <h5>Sarah Mitchell</h5>
+                                <span>Team Lead</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "Our deadlines and tasks are much clearer now.
+                            FlowPilot gives our team the structure we
+                            needed without making work complicated."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=33"
+                                 alt="Portrait of Alex Rivera">
+
+                            <div>
+                                <h5>Alex Rivera</h5>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 4 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "Working across different projects used to
+                            feel overwhelming. Now our priorities are
+                            clear, and our team stays aligned."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=44"
+                                 alt="Portrait of Olivia Bennett">
+
+                            <div>
+                                <h5>Olivia Bennett</h5>
+                                <span>Operations Manager</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 5 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "The simple layout makes it easy for new
+                            team members to understand our workflow.
+                            Getting everyone organized is much easier."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=68"
+                                 alt="Portrait of Daniel Carter">
+
+                            <div>
+                                <h5>Daniel Carter</h5>
+                                <span>Product Designer</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 6 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "FlowPilot helps us see what is happening
+                            across our projects at a glance. It has
+                            made planning our work feel more manageable."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=5"
+                                 alt="Portrait of Emily Wilson">
+
+                            <div>
+                                <h5>Emily Wilson</h5>
+                                <span>Marketing Lead</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL 7 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+
+                        <div class="testimonial-stars">★★★★★</div>
+
+                        <p class="testimonial-text">
+                            "Having tasks, deadlines, and progress
+                            together makes collaboration easier.
+                            FlowPilot keeps our team moving in the
+                            same direction."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://i.pravatar.cc/100?img=60"
+                                 alt="Portrait of Michael Brooks">
+
+                            <div>
+                                <h5>Michael Brooks</h5>
+                                <span>Startup Founder</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SLIDER CONTROLS -->
+            <div class="testimonial-controls">
+
+                <button class="testimonial-arrow"
+                        type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev"
+                        aria-label="Previous testimonial">
+                    &#8592;
+                </button>
+
+                <div class="testimonial-indicators">
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Testimonial 1"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="1"
+                            aria-label="Testimonial 2"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="2"
+                            aria-label="Testimonial 3"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="3"
+                            aria-label="Testimonial 4"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="4"
+                            aria-label="Testimonial 5"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="5"
+                            aria-label="Testimonial 6"></button>
+
+                    <button type="button"
+                            data-bs-target="#testimonialCarousel"
+                            data-bs-slide-to="6"
+                            aria-label="Testimonial 7"></button>
+                </div>
+
+                <button class="testimonial-arrow"
+                        type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next"
+                        aria-label="Next testimonial">
+                    &#8594;
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section">
+    <div class="container">
+
+        <div class="section-heading text-center">
+            <span class="section-label">FAQ</span>
+
+            <h2>Questions? We've got answers.</h2>
+
+            <p>
+                Everything you need to know about getting started
+                with FlowPilot.
+            </p>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+
+            <!-- QUESTION 1 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faqOne"
+                            aria-expanded="true"
+                            aria-controls="faqOne">
+                        What is FlowPilot?
+                    </button>
+                </h3>
+
+                <div id="faqOne"
+                     class="accordion-collapse collapse show"
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        FlowPilot is a project management platform
+                        designed to help teams organize tasks,
+                        collaborate, and track project progress
+                        in one place.
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 2 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faqTwo"
+                            aria-expanded="false"
+                            aria-controls="faqTwo">
+                        Is FlowPilot suitable for small teams?
+                    </button>
+                </h3>
+
+                <div id="faqTwo"
+                     class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes. FlowPilot is designed for individuals,
+                        small teams, and growing businesses that want
+                        a clearer way to manage their work.
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 3 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faqThree"
+                            aria-expanded="false"
+                            aria-controls="faqThree">
+                        Can I track the progress of my projects?
+                    </button>
+                </h3>
+
+                <div id="faqThree"
+                     class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The FlowPilot concept includes project
+                        dashboards, task statuses, and progress
+                        summaries to help teams understand their work.
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 4 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faqFour"
+                            aria-expanded="false"
+                            aria-controls="faqFour">
+                        Can I change my plan later?
+                    </button>
+                </h3>
+
+                <div id="faqFour"
+                     class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        The planned pricing model allows users to
+                        choose a plan that fits their needs. Actual
+                        plan changes would require a working account
+                        and subscription system.
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUESTION 5 -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faqFive"
+                            aria-expanded="false"
+                            aria-controls="faqFive">
+                        How do I get started?
+                    </button>
+                </h3>
+
+                <div id="faqFive"
+                     class="accordion-collapse collapse"
+                     data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Start by exploring the available plans and
+                        features. In this portfolio demo, account
+                        creation and workspace management are not
+                        connected to a backend yet.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="get-started" class="contact-section">
+    <div class="container">
+
+        <div class="section-heading text-center">
+            <span class="section-label">CONTACT US</span>
+            <h2>Let's talk about your team's workflow.</h2>
+            <p>
+                Have a question about FlowPilot? Send us a message
+                and let us know how we can help.
+            </p>
+        </div>
+
+        <div class="row g-5 align-items-start">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <h3>Get in touch</h3>
+
+                    <p>
+                        Whether you have a question, need help,
+                        or want to learn more about FlowPilot,
+                        we'd love to hear from you.
+                    </p>
+
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <span aria-hidden="true">&#9993;</span>
+                        </div>
+
+                        <div>
+                            <h5>Email us</h5>
+                            <a href="mailto:hello@flowpilot.com">
+                                hello@flowpilot.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-note">
+                        <strong>We're here to help.</strong>
+                        <p>
+                            Send us your questions and we'll be
+                            happy to hear from you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+                <form
+                      id="contactForm"
+                      class="contact-form"
+                      action="https://formspree.io/f/xqpeywwa"
+                      method="POST"
+                      >
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label for="contactName" class="form-label">
+                                Full name
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="contactName"
+                                name="name"
+                                placeholder="Your name"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="contactEmail" class="form-label">
+                                Email address
+                            </label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="contactEmail"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactSubject" class="form-label">
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="contactSubject"
+                                name="subject"
+                                placeholder="What is your message about?"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactMessage" class="form-label">
+                                Message
+                            </label>
+                            <textarea
+                                class="form-control"
+                                id="contactMessage"
+                                name="message"
+                                rows="5"
+                                maxlength="500"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+                        </div>
+
+            <p class="character-count">
+                   <span id="messageCount">0</span>/500 characters
+            </p>                      
+
+                        <div class="col-12">
+                            <button type="submit"
+                                    class="btn contact-submit">
+                                Send Message
+                                <span aria-hidden="true">&rarr;</span>
+                            </button>
+
+                            <p id="contactFeedback"
+                               class="contact-feedback"
+                               aria-live="polite"></p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+  </main>
+
+  <!-- FOOTER SECTION -->
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- BRAND -->
+            <div class="col-lg-4 col-md-6">
+
+                <a href="#home" class="footer-brand">
+                    <span class="footer-brand-icon">F</span>
+                    FlowPilot
+                </a>
+
+                <p class="footer-description">
+                    Bring your team, tasks, and projects together.
+                    Work smarter, stay organized, and move forward
+                    with confidence.
+                </p>
+
+            </div>
+
+            <!-- PRODUCT LINKS -->
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">Product</h5>
+
+                <ul class="footer-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+
+            </div>
+
+            <!-- COMPANY LINKS -->
+            <div class="col-lg-2 col-md-6 col-6">
+
+                <h5 class="footer-heading">Company</h5>
+
+                <ul class="footer-links">
+                    <li><a href="#home">About</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#get-started">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <!-- GET STARTED -->
+            <div class="col-lg-4 col-md-6">
+
+                <h5 class="footer-heading">Ready to get organized?</h5>
+
+                <p class="footer-description">
+                    Discover a better way to manage your team's work.
+                </p>
+
+                <a href="signup.html" class="btn footer-cta">
+                    Get Started
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 FlowPilot. All rights reserved.
+            </p>
+
+            <a href="#home" class="back-to-top">
+                Back to top &uarr;
+            </a>
+
+        </div>
+
+    </div>
+</footer>
+
+
+<!-- Floating WhatsApp Button -->
+<a
+    href="https://wa.me/2349020824543"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with FlowPilot on WhatsApp"
+    title="Chat with us on WhatsApp"
+>
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+    >
+        <path d="M20.52 3.48A11.8 11.8 0 0 0 12.12 0C5.6 0 .3 5.3.3 11.82c0 2.08.55 4.1 1.6 5.9L.2 24l6.43-1.68a11.8 11.8 0 0 0 5.49 1.36h.01c6.52 0 11.82-5.3 11.82-11.82 0-3.16-1.23-6.13-3.43-8.38ZM12.13 21.7a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.82 1 1.02-3.72-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.46 4.45-9.9 9.91-9.9a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 7c0 5.45-4.44 9.88-9.9 9.88Zm5.43-7.4c-.3-.15-1.77-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.23-.65.08-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.48-1.78-1.66-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+</a>
+
+
+  <!-- Bootstrap JavaScript -->
+  <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

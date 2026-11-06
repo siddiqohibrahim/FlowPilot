@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowPilot | Dashboard</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <aside class="dashboard-sidebar">
+            <a href="index.html" class="dashboard-brand">
+                Flow<span>Pilot</span>
+            </a>
+
+           
+                <p class="sidebar-label">WORKSPACE</p>
+
+                <div class="workspace-switcher">
+                    <label for="workspaceSelect">Current workspace</label>
+
+                    <select id="workspaceSelect" class="form-select">
+                        <option value="personal">My Workspace</option>
+                    </select>
+                </div>
+
+                <nav class="dashboard-nav">
+                <a href="#overview" class="active">Overview</a>
+                <a href="#projects">Projects</a>
+                <a href="#tasks">My Tasks</a>
+                <a href="#team">Team</a>
+                <a href="#settings">Settings</a>
+            </nav>
+
+            <button id="logoutButton" class="logout-button" type="button">
+                Log Out
+            </button>
+        </aside>
+
+        <main class="dashboard-main">
+
+           
+        <header class="dashboard-header">
+            <div>
+                <p class="dashboard-eyebrow">WORKSPACE OVERVIEW</p>
+                <h1>Welcome back, <span id="userName">there</span>!</h1>
+                <p>Here's what's happening with your projects today.</p>
+                <p id="dashboardPlanLabel" class="dashboard-eyebrow"></p>        
+            </div>
+
+            <button class="new-project-button" id="newProjectButton" type="button">
+                + New Project
+            </button>
+
+                <!-- NEW PROJECT MODAL -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+       <div class="project-modal-overlay" id="projectModalOverlay"></div>
+
+      <div class="project-modal-content"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="projectModalTitle">
+
+        <div class="project-modal-header">
+            <div>
+                <p class="project-modal-eyebrow">YOUR WORKSPACE</p>
+                <h2 id="projectModalTitle">Create New Project</h2>
+                <p>Set up a new project for your team.</p>
+            </div>
+
+            <button type="button"
+                    class="project-modal-close"
+                    id="closeProjectModal"
+                    aria-label="Close project form">
+                &times;
+            </button>
+        </div>
+
+        <form id="newProjectForm">
+            <div class="project-form-group">
+                <label for="projectName">Project Name</label>
+                <input
+                    type="text"
+                    id="projectName"
+                    name="projectName"
+                    placeholder="e.g. Website Redesign"
+                    maxlength="100"
+                    required
+                >
+            </div>
+
+            <div class="project-form-group">
+                <label for="projectDescription">Description</label>
+                <textarea
+                    id="projectDescription"
+                    name="projectDescription"
+                    rows="4"
+                    maxlength="500"
+                    placeholder="What is this project about?"
+                ></textarea>
+            </div>
+
+            <div class="project-form-group">
+                <label for="projectStatus">Project Status</label>
+                <select id="projectStatus" name="projectStatus" required>
+                    <option value="Planning">Planning</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+
+            <div class="project-modal-actions">
+                <button type="button"
+                        class="project-cancel-button"
+                        id="cancelProjectButton">
+                    Cancel
+                </button>
+
+                <button type="submit"
+                        class="new-project-button"
+                        id="saveProjectButton">
+                    Create Project
+                </button>
+            </div>
+
+            <p id="projectFormFeedback"
+               role="status"
+               aria-live="polite"></p>
+         </form>
+     </div>
+ </div>
+            </header>
+
+            <section class="dashboard-stats" id="overview">
+                <article class="stat-card">
+                    <p>Total Projects</p>
+                    <h2 id="totalProjects">0</h2>
+                    <span>Projects in your workspace</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Active Projects</p>
+                    <h2 id="activeProjects">0</h2>
+                    <span>Currently in progress</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Completed Tasks</p>
+                    <h2 id="completedTasks">0</h2>
+                    <span>Tasks marked as complete</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Pending Tasks</p>
+                    <h2 id="pendingTasks">0</h2>
+                    <span>Tasks still to do</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>In Progress Tasks</p>
+                    <h2 id="inProgressTasks">0</h2>
+                    <span>Tasks currently being worked on</span>
+                </article>
+            </section>
+
+            <section class="dashboard-panel" id="projects">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Recent Projects</h2>
+                        <p>Keep track of your latest work.</p>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                   <table class="table dashboard-table">
+                     <thead>
+                        <tr>
+                          <th>Project Name</th>
+                          <th>Status</th>
+                          <th>Progress</th>
+                          <th>Actions</th>
+                          </tr>
+                      </thead>
+
+                      <tbody id="projectTableBody">
+                          <tr>
+                              <td colspan="4">
+                                  Your projects will appear here.
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+            </section>
+
+                      <section class="dashboard-panel" id="tasks">
+
+                <div class="panel-heading">
+                    <div>
+                        <h2>My Tasks</h2>
+                        <p>Your upcoming work will appear here.</p>
+                    </div>
+
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <select
+                            id="taskStatusFilter"
+                            class="form-select"
+                            aria-label="Filter tasks by status"
+                        >
+                            <option value="All">All Tasks</option>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="newTaskButton"
+                        >
+                            + New Task
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NEW TASK FORM -->
+                <form id="newTaskForm" hidden>
+
+                    <div class="mb-3">
+                        <label for="taskTitle" class="form-label">
+                            Task Title
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="taskTitle"
+                            placeholder="e.g. Design the homepage"
+                            required
+                        >
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="taskDescription" class="form-label">
+                            Description
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="taskDescription"
+                            rows="3"
+                            placeholder="Describe what needs to be done"
+                        ></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="taskProject" class="form-label">
+                            Project
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="taskProject"
+                            required
+                        >
+                            <option value="">Choose a project</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="taskStatus" class="form-label">
+                            Status
+                        </label>
+
+                        <select
+                            class="form-select"
+                            id="taskStatus"
+                            required
+                        >
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="taskDueDate" class="form-label">
+                            Due Date (Optional)
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control"
+                            id="taskDueDate"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="saveTaskButton">
+                        Save Task
+                    </button>
+
+                    <button type="button" class="btn btn-secondary" id="cancelTaskButton">
+                        Cancel
+                    </button>
+
+                    <p id="taskFormFeedback" role="status" aria-live="polite"></p>
+
+                </form>
+
+                <!-- TASKS WILL APPEAR HERE -->
+                <div id="taskList" class="task-list">
+                    <p>No tasks have been added yet.</p>
+                </div>
+
+            </section>
+
+            <p id="dashboardFeedback" role="status" aria-live="polite"></p>
+            
+            <!-- Custom notification container -->
+<div
+    id="notificationContainer"
+    class="notification-container"
+    aria-live="polite"
+    aria-atomic="true"
+></div>
+
+<!-- Custom confirmation dialog -->
+<div
+    id="confirmationModal"
+    class="confirmation-overlay"
+    hidden
+>
+    <div
+        class="confirmation-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="confirmationTitle"
+        aria-describedby="confirmationMessage"
+    >
+        <h2 id="confirmationTitle">Are you sure?</h2>
+
+        <p id="confirmationMessage">
+            Do you want to continue with this action?
+        </p>
+
+        <div class="confirmation-actions">
+            <button
+                type="button"
+                id="cancelConfirmation"
+                class="btn btn-secondary"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                id="confirmAction"
+                class="btn btn-danger"
+            >
+                Confirm
+            </button>
+        </div>
+    </div>
+</div>
+
+ <!-- ========== TEAM SECTION ========== -->
+<section class="dashboard-panel" id="team" hidden>
+
+    <!-- TEAM HEADER -->
+    <div class="panel-heading">
+        <div>
+            <h2>Team Management</h2>
+            <p>View and manage access to your workspace.</p>
+        </div>
+
+        <button
+            type="button"
+            class="btn btn-primary"
+            id="inviteTeamMemberButton"
+        >
+            <i class="bi bi-person-plus me-2"></i>
+            Invite Member
+        </button>
+    </div>
+
+    <!-- TEAM SUMMARY -->
+    <div class="team-summary">
+
+        <div class="settings-item">
+            <p class="text-secondary mb-1">Total Members</p>
+            <h3 id="teamMemberCount">0</h3>
+        </div>
+
+    </div>
+
+    <!-- TEAM MEMBERS TABLE -->
+    <div class="settings-item mt-4">
+
+        <div class="table-responsive">
+            <table class="table align-middle">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Member</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="teamMembersTableBody">
+                    <tr>
+                        <td colspan="4" class="text-center py-4">
+                            <p class="mb-1">No team members yet.</p>
+                            <small class="text-secondary">
+                                Invite someone to start building your team.
+                            </small>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+
+    <!-- INVITATION FORM WILL BE ADDED IN THE NEXT STEP -->
+
+</section>
+<!-- ========== END TEAM SECTION ========== -->
+
+
+   
+    <!-- INVITE MEMBER FORM -->
+<div class="settings-item mt-4" id="inviteMemberFormContainer" hidden>
+
+    <h3>Invite a Team Member</h3>
+    <p class="text-secondary">
+        Add a colleague to your FlowPilot workspace.
+    </p>
+
+    <form id="inviteMemberForm">
+
+        <!-- MEMBER NAME -->
+        <div class="mb-3">
+            <label for="inviteMemberName" class="form-label">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                class="form-control"
+                id="inviteMemberName"
+                name="name"
+                placeholder="Enter member's full name"
+                maxlength="80"
+                required
+            >
+        </div>
+
+        <!-- MEMBER EMAIL -->
+        <div class="mb-3">
+            <label for="inviteMemberEmail" class="form-label">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                class="form-control"
+                id="inviteMemberEmail"
+                name="email"
+                placeholder="Enter member's email"
+                required
+            >
+        </div>
+
+        <!-- MEMBER ROLE -->
+        <div class="mb-3">
+            <label for="inviteMemberRole" class="form-label">
+                Role
+            </label>
+
+            <select
+                class="form-select"
+                id="inviteMemberRole"
+                name="role"
+                required
+            >
+                <option value="member" selected>Member</option>
+                <option value="admin">Administrator</option>
+            </select>
+        </div>
+
+        <!-- FEEDBACK MESSAGE -->
+        <p
+            id="inviteMemberFeedback"
+            class="small"
+            aria-live="polite"
+        ></p>
+
+        <!-- FORM BUTTONS -->
+        <button
+            type="submit"
+            class="btn btn-primary"
+            id="sendTeamInvitationButton"
+        >
+            Send Invitation
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-outline-secondary ms-2"
+            id="cancelTeamInvitationButton"
+        >
+            Cancel
+        </button>
+
+    </form>
+
+</div>
+<!-- END INVITE MEMBER FORM -->
+
+
+<!-- REMOVE TEAM MEMBER CONFIRMATION MODAL -->
+<div
+    class="modal fade"
+    id="removeTeamMemberModal"
+    tabindex="-1"
+    aria-labelledby="removeTeamMemberModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+
+            <div class="modal-header">
+                <h5
+                    class="modal-title"
+                    id="removeTeamMemberModalLabel"
+                >
+                    Remove Team Member
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                ></button>
+            </div>
+
+            <div class="modal-body text-center py-4">
+                <div class="mb-3">
+                    <span
+                        class="d-inline-flex align-items-center justify-content-center rounded-circle bg-danger-subtle text-danger"
+                        style="width: 64px; height: 64px;"
+                    >
+                        <i class="bi bi-person-x fs-2"></i>
+                    </span>
+                </div>
+
+                <h6>Are you sure?</h6>
+
+                <p class="text-secondary mb-2">
+                    You are about to remove
+                    <strong id="removeTeamMemberName">
+                        this team member
+                    </strong>
+                    from your workspace.
+                </p>
+
+                <small class="text-secondary">
+                    This action cannot be undone.
+                </small>
+            </div>
+
+            <div class="modal-footer justify-content-center">
+                <button
+                    type="button"
+                    class="btn btn-light"
+                    data-bs-dismiss="modal"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                    id="confirmRemoveTeamMemberButton"
+                >
+                    <i class="bi bi-trash me-1"></i>
+                    Remove Member
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ========== SETTINGS SECTION ========== -->
+<section class="dashboard-panel" id="settings" hidden>
+
+    <div class="panel-heading">
+        <div>
+            <h2>Settings</h2>
+            <p>Manage your FlowPilot account.</p>
+        </div>
+    </div>
+
+    <!-- PROFILE SETTINGS -->
+    <div class="settings-item">
+        <h3>Profile Information</h3>
+        <p>Update the name associated with your FlowPilot account.</p>
+
+        <form id="profileSettingsForm">
+
+            <!-- FULL NAME -->
+            <div class="mb-3">
+                <label for="profileName" class="form-label">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="profileName"
+                    name="profileName"
+                    class="form-control"
+                    placeholder="Enter your full name"
+                    maxlength="80"
+                    required
+                >
+            </div>
+
+            <!-- CURRENT EMAIL -->
+            <div class="mb-3">
+                <label for="profileEmail" class="form-label">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="profileEmail"
+                    name="profileEmail"
+                    class="form-control"
+                    readonly
+                >
+
+                <small class="text-secondary">
+                    Your email is managed by your authentication account.
+                </small>
+            </div>
+
+            <!-- ACCOUNT CREATED -->
+            <div class="mb-3">
+                <label for="accountCreated" class="form-label">
+                    Account Created
+                </label>
+
+                <input
+                    type="text"
+                    id="accountCreated"
+                    class="form-control"
+                    readonly
+                >
+            </div>
+
+            <!-- SAVE PROFILE -->
+            <button
+                type="submit"
+                id="saveProfileButton"
+                class="btn btn-primary"
+            >
+                Save Profile
+            </button>
+
+            <p
+                id="profileFeedback"
+                class="mt-3"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+        <!-- UPDATE EMAIL: SEPARATE FORM -->
+        <form id="updateEmailForm" class="mt-4">
+
+            <h5>Change Email Address</h5>
+            <div class="mb-3">
+                <input
+                    type="email"
+                    id="newEmail"
+                    name="newEmail"
+                    class="form-control"
+                    placeholder="Enter your new email"
+                    required
+                >
+            </div>
+
+            <button
+                type="submit"
+                id="updateEmailButton"
+                class="btn btn-primary"
+            >
+                Update Email
+            </button>
+
+            <p
+                id="emailUpdateFeedback"
+                class="mt-3"
+                aria-live="polite"
+            ></p>
+
+        </form>
+    </div>
+
+    <!-- ACCOUNT SETTINGS -->
+    <div class="settings-content">
+
+        
+        <!-- PASSWORD AND SECURITY -->
+        <div class="settings-item">
+            <h3>Password and security</h3>
+
+            <p>
+                Use the password reset option to manage
+                your account password.
+            </p>
+
+            <button
+                type="button"
+                class="btn btn-outline-primary"
+                id="settingsResetPassword"
+            >
+                Reset Password
+            </button>
+        </div>
+
+        <!-- SIGN OUT -->
+        <div class="settings-item">
+            <h3>Sign out</h3>
+
+            <p>Sign out of your FlowPilot account securely.</p>
+
+            <button
+                type="button"
+                class="btn btn-outline-danger"
+                id="settingsLogout"
+            >
+                Sign Out
+            </button>
+        </div>
+
+    </div>
+
+</section>
+        </main>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

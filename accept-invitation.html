@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accept Invitation | FlowPilot</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <div class="settings-item p-4 p-md-5">
+
+                    <h1 class="h3 mb-3">You're invited to FlowPilot</h1>
+
+                    <p class="text-secondary">
+                        You've been invited to join a workspace.
+                        Accept your invitation to get started.
+                    </p>
+
+                    <div
+                        id="invitationMessage"
+                        class="alert alert-info"
+                        role="status"
+                    >
+                        Checking your invitation...
+                    </div>
+
+                    <button
+                        type="button"
+                        id="acceptInvitationButton"
+                        class="btn btn-primary w-100"
+                        disabled
+                    >
+                        Accept Invitation
+                    </button>
+                     
+                    <p class="text-center mt-3 mb-0">
+                        Already have an account?
+                        <a id="invitationLoginLink" href="login.html">Sign in</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="accept-invitation.js" defer></script>
+
+</body>
+</html>
